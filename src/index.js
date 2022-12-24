@@ -95,9 +95,8 @@ import LoadMoreSection from "./js/LoadMoreSection";
 
   const searchFormElement = document.querySelector("#search-form");
   const galleryElement = document.querySelector(".gallery");
-  const mainElement = document.querySelector("main");
 
-  if (!searchFormElement || !galleryElement || !mainElement) {
+  if (!searchFormElement || !galleryElement) {
     return;
   }
 
@@ -106,7 +105,6 @@ import LoadMoreSection from "./js/LoadMoreSection";
 
   const loadMoreSection = new LoadMoreSection();
   loadMoreSection.setListener(onLoadMore);
-  mainElement.appendChild(loadMoreSection.getElement());
 
   searchFormElement.addEventListener("submit", onFormSubmit);
 })();
