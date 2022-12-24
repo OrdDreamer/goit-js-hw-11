@@ -1,2 +1,132 @@
-@import './common';
-@import './example';
+body {
+  background-color: #adafd6;
+  font-family: 'Martian Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #fff;
+  background-color: inherit;
+}
+
+.search-form {
+  height: 50px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.search-input {
+  height: 100%;
+  width: 300px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5)
+  }
+}
+
+.search-button {
+  margin: 0 0 0 20px;
+  padding: 0;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.1)
+  }
+}
+
+.search-icon {
+  display: block;
+  fill: #fff;
+}
+
+.gallery {
+  margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.photo-card {
+  width: 320px;
+  display: block;
+  border: 2px solid #fff;
+  padding: 10px;
+  color: #fff;
+}
+
+.photo {
+  width: 100%;
+}
+
+.info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  margin: 0;
+}
+
+.info-item__label {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+.load-more {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more__button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
